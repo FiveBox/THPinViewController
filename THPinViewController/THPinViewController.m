@@ -197,9 +197,9 @@
     return MAX(pinLength, (NSUInteger)1);
 }
 
-- (BOOL)pinView:(THPinView *)pinView isPinValid:(NSString *)pin
+- (void)pinView:(THPinView *)pinView isPinValid:(NSString *)pin callback:(void(^)(BOOL))callback
 {
-    return [self.delegate pinViewController:self isPinValid:pin];
+    [self.delegate pinViewController:self isPinValid:pin callback:callback];
 }
 
 - (void)cancelButtonTappedInPinView:(THPinView *)pinView

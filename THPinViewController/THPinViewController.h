@@ -18,7 +18,7 @@ static const NSInteger THPinViewControllerContentViewTag = 14742;
 
 @required
 - (NSUInteger)pinLengthForPinViewController:(THPinViewController *)pinViewController;
-- (BOOL)pinViewController:(THPinViewController *)pinViewController isPinValid:(NSString *)pin;
+- (void)pinViewController:(THPinViewController *)pinViewController isPinValid:(NSString *)pin callback: (void(^)(BOOL))callback;
 - (BOOL)userCanRetryInPinViewController:(THPinViewController *)pinViewController;
 
 @optional
